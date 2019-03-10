@@ -1,4 +1,4 @@
-# practicas
+# PRACTICA_XML
 
 Hi!
 
