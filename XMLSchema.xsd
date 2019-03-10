@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.example.org/XMLSchema" 
+	xmlns:tns="http://www.example.org/XMLSchema" 
+	elementFormDefault="qualified">
+	
+	<xsd:complexType name="cast">
+		<xsd:sequence>
+			<xsd:element name="nombre" type="xsd:string"/>
+			<xsd:element name="apellidos" type="xsd:string"/>
+			<xsd:element name="nombrePersonajeInterpretado" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="screenwriter">
+		<xsd:sequence>
+			<xsd:element name="nombreGuionista" type="xsd:string"/>
+			<xsd:element name="apellidosGuionista" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="amount">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[0-9]{1,}"/> <!-- podria declararlo como xsd:positiveInteger si se quiere realizar una operacion en un futuro -->
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="summary">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="100"/>
+      		<xsd:maxLength value="1000"/>
+			</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="genre">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="accion"/>
+			<xsd:enumeration value="suspense"/>
+			<xsd:enumeration value="comedia"/>
+			<xsd:enumeration value="drama"/>
+			<xsd:enumeration value="ciencia ficcion"/>
+			<xsd:enumeration value="fantasia"/>
+			<xsd:enumeration value="terror"/>
+			<xsd:enumeration value="romance"/>
+			<xsd:enumeration value="melodrama"/>
+			<xsd:enumeration value="musical"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="team">
+		<xsd:sequence>
+			<xsd:element name="nombre" type="xsd:string"/>
+			<xsd:element name="apellidos" type="xsd:string"/>
+			<xsd:element name="cargo" type="tns:charge"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="charge">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="director"/>
+			<xsd:enumeration value="productor"/>
+			<xsd:enumeration value="jefe"/>
+			<xsd:enumeration value="productor ejecutivo"/>
+			<xsd:enumeration value="delegado"/>
+			<xsd:enumeration value="ayudante"/>
+			<xsd:enumeration value="musica"/>
+			<xsd:enumeration value="codirector"/>
+			<xsd:enumeration value="fotografia"/>
+			<xsd:enumeration value="maquillaje"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="money">
+		<xsd:sequence>
+			<xsd:element name="cantidad" type="tns:amount"/> <!-- podria declararlo como xsd:integer si se quiere realizar una operacion en un futuro -->
+			<xsd:element name="moneda" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="collection" mixed="true">
+			<xsd:sequence>
+				<xsd:element name="cantidad" type="tns:amount"/> <!-- podria declararlo como xsd:integer si se quiere realizar una operacion en un futuro -->
+				<xsd:element name="moneda" type="xsd:string"/>
+				<xsd:element name="fecha" type="xsd:string"/>
+			</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="resolution">
+		<xsd:choice>
+				<xsd:element name="numerosEnteros" type="tns:integerN"/>
+				<xsd:element name="tantoPorUno" type="tns:perOne"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="integerN">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[0-9]{1,2}:[0-9]{1} ?"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="perOne">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="([0-9]{1,2}\,[0-9]{1,2}:1?)"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="Pelicula">
+	
+		<xsd:complexType>
+		
+			<xsd:sequence>
+			
+				<xsd:element name="titulo" type="xsd:string"/>
+				
+				<xsd:element name="tituloOriginal" type="xsd:string"/>
+				
+				<xsd:element name="anioEstreno" type="tns:amount"/> <!-- podria declararlo como xsd:gYear si se quiere realizar una operacion en un futuro -->
+				
+				<xsd:element name="duracionMinutos" type="tns:amount"/> 
+					
+				<xsd:element name="idiomas" type="xsd:string" maxOccurs="unbounded"/>
+				
+				<xsd:element name="nombreEmpresa" type="xsd:string"/>
+				
+				<xsd:element name="genero" type="tns:genre" maxOccurs="5"/>
+				
+				<xsd:element name="resumen" type="tns:summary"/>
+				
+				<xsd:element name="guionistas" type="tns:screenwriter" maxOccurs="unbounded"/>
+				
+				<xsd:element name="reparto" type="tns:cast" maxOccurs="unbounded"/>
+				
+				<xsd:element name="equipoDireccion" type="tns:team" maxOccurs="unbounded"/>
+				
+				<xsd:element name="equipoProduccion" type="tns:team" maxOccurs="unbounded"/>
+				
+				<xsd:element name="presupuesto" type="tns:money"/>
+				
+				<xsd:element name="recaudacion" type="tns:collection"/>
+				
+				<xsd:element name="imagenes" type="xsd:anyURI" maxOccurs="5"/>
+				
+				<xsd:element name="resolucion" type="tns:resolution"/>
+			
+			</xsd:sequence>
+			
+		</xsd:complexType>
+		
+	</xsd:element>
+	
+
+</xsd:schema>

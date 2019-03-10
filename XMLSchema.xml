@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Pelicula xmlns:tns="http://www.example.org/XMLSchema" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.example.org/XMLSchema XMLSchema.xsd ">
+
+	<!-- _______________________________	CARACTERISTICAS	   _______________________________-->
+
+	<tns:titulo>Spiderman</tns:titulo>
+	<tns:tituloOriginal>Spider-man</tns:tituloOriginal>
+	<tns:anioEstreno>2012</tns:anioEstreno>
+	<tns:duracionMinutos>136</tns:duracionMinutos>
+	
+	
+	<tns:idiomas>espanol</tns:idiomas>
+	<tns:idiomas>ingles</tns:idiomas>
+	<tns:idiomas>portugues</tns:idiomas>
+	<tns:idiomas>polaco</tns:idiomas>
+	<tns:idiomas>aleman</tns:idiomas>
+	<tns:idiomas>turco</tns:idiomas>
+	<tns:idiomas>frances</tns:idiomas>
+	
+	
+	<tns:nombreEmpresa>Sony Pictures</tns:nombreEmpresa>
+	
+	
+	<tns:genero>accion</tns:genero>
+	<tns:genero>drama</tns:genero>
+	<tns:genero>comedia</tns:genero>
+	<tns:genero>ciencia ficcion</tns:genero>
+	<tns:genero>suspense</tns:genero>
+	
+	
+	<tns:resumen>
+			Un estudiante de secundaria que fue abandonado por sus padres cuando era niño, 
+		dejándolo a cargo de su tío Ben (Martin Sheen) y su tía May (Sally Field). 
+			Como la mayoría de los adolescentes de su edad, 
+		Peter trata de averiguar quién es y qué quiere llegar a ser.
+		Peter también está encontrando su camino con su primer amor de secundaria,
+		Gwen Stacy (Emma Stone),
+		y juntos luchan por su amor con compromiso. 
+			Cuando Peter descubre un misterioso maletín que perteneció a su padre,
+		comienza la búsqueda para entender la desaparición de sus padres,
+		una búsqueda que le lleva directamente a Oscorp,
+		el laboratorio del Dr. Curt Connors (Rhys Ifans), ex compañero de trabajo de su padre. 
+			Mientras Spider-Man se encuentra en plena colisión con el alter-ego de Connors,
+		el Lagarto, Peter hará elecciones que alterarán sus opciones para usar sus poderes 
+		y darán forma a un destino que le convertirá en un superhéroe.
+	</tns:resumen>
+	
+	<!--_______________________________		GUIONISTAS	  _______________________________-->
+	
+	<tns:guionistas>
+		<tns:nombreGuionista>Quentin</tns:nombreGuionista>
+		<tns:apellidosGuionista>Tarantino</tns:apellidosGuionista>
+	</tns:guionistas>
+	<tns:guionistas>
+	  	<tns:nombreGuionista>Francis</tns:nombreGuionista>
+	  	<tns:apellidosGuionista>Ford Coppola</tns:apellidosGuionista>
+	</tns:guionistas>
+	<tns:guionistas>
+	  	<tns:nombreGuionista>Guillermo</tns:nombreGuionista>
+	  	<tns:apellidosGuionista>del Toro</tns:apellidosGuionista>
+	</tns:guionistas>
+	
+	<!--________________________________	REPARTO		_______________________________-->
+	
+	<tns:reparto>
+	  	<tns:nombre>Andrew</tns:nombre>
+	  	<tns:apellidos>Garfield</tns:apellidos>
+	  	<tns:nombrePersonajeInterpretado>Peter Parker</tns:nombrePersonajeInterpretado>
+	</tns:reparto>
+	<tns:reparto>
+	  	<tns:nombre>Emma</tns:nombre>
+	  	<tns:apellidos>Stone</tns:apellidos>
+	  	<tns:nombrePersonajeInterpretado>Gwen Stacy</tns:nombrePersonajeInterpretado>
+	</tns:reparto>
+	<tns:reparto>
+	  	<tns:nombre>Rhys</tns:nombre>
+	  	<tns:apellidos>Ifans</tns:apellidos>
+	  	<tns:nombrePersonajeInterpretado>Curt Connors</tns:nombrePersonajeInterpretado>
+	</tns:reparto>
+	<tns:reparto>
+	  	<tns:nombre>Martin</tns:nombre>
+	  	<tns:apellidos>Sheen</tns:apellidos>
+	  	<tns:nombrePersonajeInterpretado>tío Ben</tns:nombrePersonajeInterpretado>
+	</tns:reparto>
+	<tns:reparto>
+	  	<tns:nombre>Denis</tns:nombre>
+	  	<tns:apellidos>Leary</tns:apellidos>
+	  	<tns:nombrePersonajeInterpretado>Capitan Stacy</tns:nombrePersonajeInterpretado>
+	</tns:reparto>
+	
+	<!--_______________________________		DIRECCION Y PRODUCCION	  _______________________________-->
+	
+	<tns:equipoDireccion>
+	  	<tns:nombre>Marc</tns:nombre>
+	  	<tns:apellidos>Web</tns:apellidos>
+	  	<tns:cargo>director</tns:cargo>
+	</tns:equipoDireccion>
+	<tns:equipoDireccion>
+	  	<tns:nombre>James</tns:nombre>
+	  	<tns:apellidos>Vanderbilt</tns:apellidos>
+	  	<tns:cargo>codirector</tns:cargo>
+	</tns:equipoDireccion>
+	
+	<tns:equipoProduccion>
+	  	<tns:nombre>John</tns:nombre>
+	  	<tns:apellidos>Schwartzman</tns:apellidos>
+	  	<tns:cargo>fotografia</tns:cargo>
+	</tns:equipoProduccion>
+	<tns:equipoProduccion>
+	  	<tns:nombre>Kym</tns:nombre>
+	  	<tns:apellidos>Barrett</tns:apellidos>
+	  	<tns:cargo>maquillaje</tns:cargo>
+	</tns:equipoProduccion>
+	<tns:equipoProduccion>
+	  	<tns:nombre>James</tns:nombre>
+	  	<tns:apellidos>Horner</tns:apellidos>
+	  	<tns:cargo>musica</tns:cargo>
+	</tns:equipoProduccion>
+	
+	<!--_______________________________ 	PRESUPUESTO Y RECAUDACION	 _______________________________-->
+	
+	<tns:presupuesto>
+		<tns:cantidad>1000000</tns:cantidad>
+		<tns:moneda>dolares</tns:moneda>
+	</tns:presupuesto>
+	
+	<tns:recaudacion>
+ 	 	<tns:cantidad>50</tns:cantidad> millones de <tns:moneda>dolares</tns:moneda>recaudados hasta el <tns:fecha>05 de Marzo de 2013.</tns:fecha>
+	</tns:recaudacion>
+	
+	<!--_______________________________   	IMAGENES Y RESOLUCION	 _______________________________-->
+	
+	<tns:imagenes>pictures/spiderman1.jpeg</tns:imagenes>
+	<tns:imagenes>pictures/spiderman2.jpeg</tns:imagenes>
+	<tns:imagenes>pictures/spiderman3.jpeg</tns:imagenes>
+	<tns:imagenes>pictures/spiderman4.jpeg</tns:imagenes>
+	<tns:imagenes>pictures/spiderman5.jpeg</tns:imagenes>
+	
+	<tns:resolucion>
+  		<tns:tantoPorUno>1,67:1</tns:tantoPorUno> <!-- o bien, tns:numerosEnteros (con el patron de:) 5:9  -->
+	</tns:resolucion>
+  
+</tns:Pelicula>
